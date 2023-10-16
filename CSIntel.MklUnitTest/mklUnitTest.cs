@@ -76,7 +76,8 @@ namespace CSIntel.MklUnitTest
             CBLAS.sgemm(Order, TransA, TransB, rows_a, cols_b, cols_a, alpha, A, rows_a, B, rows_b, beta, ref C, rows_c);
 
             mC = alpha * mA * mB + beta * mC; //sgemm
-            var expected = mC.ToColumnWiseArray(); //reference result by Math.Net
+            // var expected = mC.ToColumnWiseArray(); //reference result by Math.Net
+            var expected = mC.ToColumnMajorArray();
 
             for (int i = 0; i < C.Length; i++)
             {
