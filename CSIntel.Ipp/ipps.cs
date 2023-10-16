@@ -306,7 +306,7 @@ namespace CSIntel.Ipp
         }
     };
 
-    unsafe public class sp
+    unsafe public partial class sp
     {
         internal const string libname = "ipps.dll";
 
