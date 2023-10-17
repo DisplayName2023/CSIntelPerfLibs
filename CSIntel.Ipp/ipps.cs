@@ -3363,22 +3363,28 @@ namespace CSIntel.Ipp
         [SuppressUnmanagedCodeSecurityAttribute()]
         [DllImport(libname)]
         public static extern
-        IppStatus ippsFIRGenBandpass_64f(double rLowFreq, double rHighFreq, double* taps, int tapsLen, IppWinType winType, IppBool doNormal);
+        IppStatus ippsFIRGenGetBufferSize(int tapsLen, int* pBufferSize);
+
 
         [SuppressUnmanagedCodeSecurityAttribute()]
         [DllImport(libname)]
         public static extern
-        IppStatus ippsFIRGenBandstop_64f(double rLowFreq, double rHighFreq, double* taps, int tapsLen, IppWinType winType, IppBool doNormal);
+        IppStatus ippsFIRGenBandpass_64f(double rLowFreq, double rHighFreq, double* taps, int tapsLen, IppWinType winType, IppBool doNormal, byte* pBuffer);
 
         [SuppressUnmanagedCodeSecurityAttribute()]
         [DllImport(libname)]
         public static extern
-        IppStatus ippsFIRGenHighpass_64f(double rfreq, double* taps, int tapsLen, IppWinType winType, IppBool doNormal);
+        IppStatus ippsFIRGenBandstop_64f(double rLowFreq, double rHighFreq, double* taps, int tapsLen, IppWinType winType, IppBool doNormal, byte* pBuffer);
 
         [SuppressUnmanagedCodeSecurityAttribute()]
         [DllImport(libname)]
         public static extern
-        IppStatus ippsFIRGenLowpass_64f(double rfreq, double* taps, int tapsLen, IppWinType winType, IppBool doNormal);
+        IppStatus ippsFIRGenHighpass_64f(double rfreq, double* taps, int tapsLen, IppWinType winType, IppBool doNormal, byte* pBuffer);
+
+        [SuppressUnmanagedCodeSecurityAttribute()]
+        [DllImport(libname)]
+        public static extern
+        IppStatus ippsFIRGenLowpass_64f(double rfreq, double* taps, int tapsLen, IppWinType winType, IppBool doNormal, byte* pBuffer);
 
         [SuppressUnmanagedCodeSecurityAttribute()]
         [DllImport(libname)]
