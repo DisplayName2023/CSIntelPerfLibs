@@ -19,13 +19,64 @@ namespace CSIntel.Ipp
         public const int IPP_FFT_DIV_BY_SQRTN = 4;
         public const int IPP_FFT_NODIV_BY_ANY = 8;
 
-        [SuppressUnmanagedCodeSecurityAttribute()]
+
+
+        [SuppressUnmanagedCodeSecurity()]
+        [DllImport(libname)]
+        public static extern IppStatus ippsFree(void* p);
+
+
+        [SuppressUnmanagedCodeSecurity()]
         [DllImport(libname)]
         public static extern byte* ippsMalloc_8u(int len);
 
-        [SuppressUnmanagedCodeSecurityAttribute()]
+
+        [SuppressUnmanagedCodeSecurity()]
         [DllImport(libname)]
-        public static extern IppStatus ippsFree(void* p);
+        public static extern ushort* ippsMalloc_16u(int len);
+
+
+        [SuppressUnmanagedCodeSecurity()]
+        [DllImport(libname)]
+        public static extern uint* ippsMalloc_32u(int len);
+
+
+        [SuppressUnmanagedCodeSecurity()]
+        [DllImport(libname)]
+        public static extern short* ippsMalloc_16s(int len);
+
+
+        [SuppressUnmanagedCodeSecurity()]
+        [DllImport(libname)]
+        public static extern int* ippsMalloc_32s(int len);
+
+
+        [SuppressUnmanagedCodeSecurity()]
+        [DllImport(libname)]
+        public static extern Int64* ippsMalloc_64s(int len);
+
+
+
+        [SuppressUnmanagedCodeSecurity()]
+        [DllImport(libname)]
+        public static extern float* ippsMalloc_32f(int len);
+
+        [SuppressUnmanagedCodeSecurity()]
+        [DllImport(libname)]
+        public static extern double* ippsMalloc_64f(int len);
+
+
+        [SuppressUnmanagedCodeSecurity()]
+        [DllImport(libname)]
+        public static extern IppComplexF* ippsMalloc_32fc(int len);
+
+
+        [SuppressUnmanagedCodeSecurity()]
+        [DllImport(libname)]
+        public static extern IppComplex* ippsMalloc_64fc(int len);
+
+
+
 
 
 
