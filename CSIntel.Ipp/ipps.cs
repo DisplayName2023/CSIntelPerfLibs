@@ -251,6 +251,11 @@ namespace CSIntel.Ipp
     [StructLayout(LayoutKind.Sequential)]
     public struct IppsRandGaussState_32f { };
 
+
+    [StructLayout(LayoutKind.Sequential)]
+    public struct IppsRandGaussState_64f { };
+
+
     [StructLayout(LayoutKind.Sequential)]
     public struct IppsRandGaussState_8u { };
 
@@ -7826,75 +7831,97 @@ namespace CSIntel.Ipp
         public static extern
         IppStatus ippsRShiftC_8u_I(int val, byte* pSrcDst, int len);
 
-        [SuppressUnmanagedCodeSecurityAttribute()]
-        [DllImport(libname)]
-        public static extern
-        IppStatus ippsRandGaussFree_16s(IppsRandGaussState_16s* pRandGaussState);
+
+
+        //[SuppressUnmanagedCodeSecurityAttribute()]
+        //[DllImport(libname)]
+        //public static extern
+        //IppStatus ippsRandGaussFree_16s(IppsRandGaussState_16s* pRandGaussState);
+
+        //[SuppressUnmanagedCodeSecurityAttribute()]
+        //[DllImport(libname)]
+        //public static extern
+        //IppStatus ippsRandGaussFree_32f(IppsRandGaussState_32f* pRandGaussState);
+
+        //[SuppressUnmanagedCodeSecurityAttribute()]
+        //[DllImport(libname)]
+        //public static extern
+        //IppStatus ippsRandGaussFree_8u(IppsRandGaussState_8u* pRandGaussState);
+
+        //[SuppressUnmanagedCodeSecurityAttribute()]
+        //[DllImport(libname)]
+        //public static extern
+        //IppStatus ippsRandGaussGetSize_16s(int* pRandGaussStateSize);
+
+        //[SuppressUnmanagedCodeSecurityAttribute()]
+        //[DllImport(libname)]
+        //public static extern
+        //IppStatus ippsRandGaussInitAlloc_16s(IppsRandGaussState_16s** pRandGaussState, short mean, short stdDev, uint seed);
+
+        //[SuppressUnmanagedCodeSecurityAttribute()]
+        //[DllImport(libname)]
+        //public static extern
+        //IppStatus ippsRandGaussInitAlloc_32f(IppsRandGaussState_32f** pRandGaussState, float mean, float stdDev, uint seed);
+
+        //[SuppressUnmanagedCodeSecurityAttribute()]
+        //[DllImport(libname)]
+        //public static extern
+        //IppStatus ippsRandGaussInitAlloc_8u(IppsRandGaussState_8u** pRandGaussState, byte mean, byte stdDev, uint seed);
+
+        //[SuppressUnmanagedCodeSecurityAttribute()]
+        //[DllImport(libname)]
+        //public static extern
+        //IppStatus ippsRandGaussInit_16s(IppsRandGaussState_16s* pRandGaussState, short mean, short stdDev, uint seed);
+
+        //[SuppressUnmanagedCodeSecurityAttribute()]
+        //[DllImport(libname)]
+        //public static extern
+        //IppStatus ippsRandGauss_16s(short* pDst, int len, IppsRandGaussState_16s* pRandGaussState);
+
+        //[SuppressUnmanagedCodeSecurityAttribute()]
+        //[DllImport(libname)]
+        //public static extern
+        //IppStatus ippsRandGauss_32f(float* pDst, int len, IppsRandGaussState_32f* pRandGaussState);
+
+        //[SuppressUnmanagedCodeSecurityAttribute()]
+        //[DllImport(libname)]
+        //public static extern
+        //IppStatus ippsRandGauss_8u(byte* pDst, int len, IppsRandGaussState_8u* pRandGaussState);
+
+        //[SuppressUnmanagedCodeSecurityAttribute()]
+        //[DllImport(libname)]
+        //public static extern
+        //IppStatus ippsRandGauss_Direct_16s(short* pDst, int len, short mean, short stdev, uint* pSeed);
+
+        //[SuppressUnmanagedCodeSecurityAttribute()]
+        //[DllImport(libname)]
+        //public static extern
+        //IppStatus ippsRandGauss_Direct_32f(float* pDst, int len, float mean, float stdev, uint* pSeed);
+
+        //[SuppressUnmanagedCodeSecurityAttribute()]
+        //[DllImport(libname)]
+        //public static extern
+        //IppStatus ippsRandGauss_Direct_64f(double* pDst, int len, double mean, double stdev, uint* pSeed);
 
         [SuppressUnmanagedCodeSecurityAttribute()]
         [DllImport(libname)]
         public static extern
-        IppStatus ippsRandGaussFree_32f(IppsRandGaussState_32f* pRandGaussState);
+        IppStatus ippsRandGaussInit_64f(IppsRandGaussState_64f* pRandGaussState, double mean, double stdDev, uint seed);
+
 
         [SuppressUnmanagedCodeSecurityAttribute()]
         [DllImport(libname)]
         public static extern
-        IppStatus ippsRandGaussFree_8u(IppsRandGaussState_8u* pRandGaussState);
+        IppStatus ippsRandGaussGetSize_64f(out int pRandGaussStateSize);
+
 
         [SuppressUnmanagedCodeSecurityAttribute()]
         [DllImport(libname)]
         public static extern
-        IppStatus ippsRandGaussGetSize_16s(int* pRandGaussStateSize);
+        IppStatus ippsRandGauss_64f(double* pDst, int len, IppsRandGaussState_64f* pRandGaussState);
 
-        [SuppressUnmanagedCodeSecurityAttribute()]
-        [DllImport(libname)]
-        public static extern
-        IppStatus ippsRandGaussInitAlloc_16s(IppsRandGaussState_16s** pRandGaussState, short mean, short stdDev, uint seed);
 
-        [SuppressUnmanagedCodeSecurityAttribute()]
-        [DllImport(libname)]
-        public static extern
-        IppStatus ippsRandGaussInitAlloc_32f(IppsRandGaussState_32f** pRandGaussState, float mean, float stdDev, uint seed);
 
-        [SuppressUnmanagedCodeSecurityAttribute()]
-        [DllImport(libname)]
-        public static extern
-        IppStatus ippsRandGaussInitAlloc_8u(IppsRandGaussState_8u** pRandGaussState, byte mean, byte stdDev, uint seed);
-
-        [SuppressUnmanagedCodeSecurityAttribute()]
-        [DllImport(libname)]
-        public static extern
-        IppStatus ippsRandGaussInit_16s(IppsRandGaussState_16s* pRandGaussState, short mean, short stdDev, uint seed);
-
-        [SuppressUnmanagedCodeSecurityAttribute()]
-        [DllImport(libname)]
-        public static extern
-        IppStatus ippsRandGauss_16s(short* pDst, int len, IppsRandGaussState_16s* pRandGaussState);
-
-        [SuppressUnmanagedCodeSecurityAttribute()]
-        [DllImport(libname)]
-        public static extern
-        IppStatus ippsRandGauss_32f(float* pDst, int len, IppsRandGaussState_32f* pRandGaussState);
-
-        [SuppressUnmanagedCodeSecurityAttribute()]
-        [DllImport(libname)]
-        public static extern
-        IppStatus ippsRandGauss_8u(byte* pDst, int len, IppsRandGaussState_8u* pRandGaussState);
-
-        [SuppressUnmanagedCodeSecurityAttribute()]
-        [DllImport(libname)]
-        public static extern
-        IppStatus ippsRandGauss_Direct_16s(short* pDst, int len, short mean, short stdev, uint* pSeed);
-
-        [SuppressUnmanagedCodeSecurityAttribute()]
-        [DllImport(libname)]
-        public static extern
-        IppStatus ippsRandGauss_Direct_32f(float* pDst, int len, float mean, float stdev, uint* pSeed);
-
-        [SuppressUnmanagedCodeSecurityAttribute()]
-        [DllImport(libname)]
-        public static extern
-        IppStatus ippsRandGauss_Direct_64f(double* pDst, int len, double mean, double stdev, uint* pSeed);
 
         [SuppressUnmanagedCodeSecurityAttribute()]
         [DllImport(libname)]

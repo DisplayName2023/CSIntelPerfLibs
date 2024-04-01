@@ -98,8 +98,13 @@ namespace CSIntel.Ipp
         [DllImport(libname)]
         public static extern IppStatus ippsFIRMRGetSize(int tapsLen, int upFactor, int downFactor, IppDataType tapsType, int* pSpecSize, int* pBufSize);
 
-    
-    
+
+
+
+
+
+
+
     }
 
 }
