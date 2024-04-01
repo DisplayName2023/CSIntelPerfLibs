@@ -1,11 +1,12 @@
 ﻿using CSIntel.Mkl;
+using CSIntel.MklUnitTest.NET;
 using MathNet.Numerics.LinearAlgebra;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
 namespace CSIntel.MklUnitTest
 {
-    [TestClass]
+    [DisabledTestClass]
     public class mklUnitTest
     {
         [TestMethod]

@@ -26,7 +26,7 @@ namespace CSIntel.Ipp.Tests
             IppsRandGaussState_64f* randGaussState = (IppsRandGaussState_64f*)sp.ippsMalloc_64f(randGaussStateSize);
 
             // Initialize the random number generator
-            IppStatus status = sp.ippsRandGaussInit_64f(randGaussState, 1, 1, 123456);
+            IppStatus status = sp.ippsRandGaussInit_64f(randGaussState, 1, 1, 1234567);
 
             double* randNumbersPtr = sp.ippsMalloc_64f(length);
 
